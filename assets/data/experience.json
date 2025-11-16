@@ -1,0 +1,61 @@
+{
+  "experiences": [
+    {
+      "id": "qh",
+      "initials": "QH",
+      "title": "Data Automation Engineer",
+      "company": "Queensland Health",
+      "period": "2024 - Present",
+      "color": "sky",
+      "description": "Engineering enterprise-scale Python and SQL automation pipelines for Oracle and SAP financial datasets. Rebuilding legacy Low Code workflows into production-ready systems, implementing validation frameworks, and delivering automated reporting that supports CFO-level decision making across the Statewide Accounts Payable division.",
+      "technologies": [
+        "Python",
+        "Oracle SQL",
+        "SAP VIM",
+        "Pandas",
+        "ETL",
+        "Power BI",
+        "SharePoint",
+        "Power Automate",
+        "Financial Data"
+      ]
+    },
+    {
+      "id": "datacom",
+      "initials": "DC",
+      "title": "IT Analyst",
+      "company": "Datacom",
+      "period": "2024",
+      "color": "indigo",
+      "description": "Delivered L1-L2 support across multiple Queensland government agencies, achieving high SLA compliance while managing enterprise systems across AD, Azure AD, Exchange, Citrix, and VPN platforms. Identified security issues, automated routine support tasks, and improved service workflows.",
+      "technologies": [
+        "Active Directory",
+        "Azure AD",
+        "Microsoft Exchange",
+        "Citrix",
+        "VPN",
+        "Windows",
+        "iOS"
+      ]
+    },
+    {
+      "id": "mcnab",
+      "initials": "MN",
+      "title": "Junior Contracts Analyst",
+      "company": "McNab Developments",
+      "period": "2021 - 2024",
+      "color": "amber",
+      "description": "Managed financial data for $91M across multiple Tier 1 construction projects. Built Excel-based cost tracking models, analysed procurement and budget variance data, and strengthened audit traceability through standardised reporting. Collaborated with finance and project teams to improve forecasting accuracy and documentation quality.",
+      "technologies": [
+        "Excel",
+        "Financial Modelling",
+        "Cost Analysis",
+        "Procurement Data",
+        "Reporting",
+        "Project Management"
+      ]
+    }
+    
+  ]
+}
+

@@ -1,0 +1,21 @@
+{
+  "skills": [
+    { "name": "Python Development", "percentage": 95, "color": "blue" },
+    { "name": "SQL & Database Design", "percentage": 90, "color": "emerald" },
+    { "name": "Data Pipeline Architecture", "percentage": 88, "color": "amber" },
+    { "name": "Oracle & Enterprise Systems", "percentage": 85, "color": "blue" },
+    { "name": "Automation & ETL", "percentage": 92, "color": "emerald" }
+  ],
+  "chartData": {
+    "indicators": [
+      { "name": "Python", "max": 100 },
+      { "name": "SQL", "max": 100 },
+      { "name": "Data Pipeline", "max": 100 },
+      { "name": "Automation", "max": 100 },
+      { "name": "Oracle", "max": 100 },
+      { "name": "ETL", "max": 100 }
+    ],
+    "values": [95, 90, 88, 92, 85, 90]
+  }
+}
+

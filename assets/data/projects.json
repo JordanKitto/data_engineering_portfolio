@@ -1,0 +1,157 @@
+{
+  "projects": [
+    {
+      "id": "service-entry",
+      "title": "Service Entry Pipeline",
+      "description": "Automated Oracle \u2192 CSV \u2192 Email pipeline for daily Service Entry report processing with modular OOP design.",
+      "category": ["pipeline", "automation"],
+      "techStack": ["Python", "Oracle", "SQL"],
+      "metrics": [
+        {
+          "label": "Processing Time Reduction",
+          "value": "90%",
+          "color": "green"
+        },
+        {
+          "label": "Daily Records Processed",
+          "value": "5,000+",
+          "color": "blue"
+        }
+      ],
+      "githubUrl": "https://github.com/JordanKitto/service-entry-pipeline",
+      "icon": "lightning",
+      "iconColor": "blue",
+      "details": {
+        "description": "A comprehensive automated pipeline that connects to Oracle databases, processes daily service entry records, and delivers formatted reports via email.",
+        "features": [
+          "Oracle database connectivity with secure credential management",
+          "Parameterized SQL query execution",
+          "Automated CSV generation with date stamping",
+          "Email distribution with attachment handling",
+          "Comprehensive logging and error handling",
+          "Modular OOP design for maintainability"
+        ],
+        "techStack": ["Python", "Oracle SQL", "Pandas", "SMTP", "OOP"],
+        "impact": "Reduced manual processing time by 80% and improved data accuracy"
+      }
+    },
+    {
+      "id": "invoice-insight",
+      "title": "Invoice Insight Automation",
+      "description": "Python automation engine for Queensland Health's invoice optimization report, processing 1.8M+ invoices annually.",
+      "category": ["automation", "analytics"],
+      "techStack": ["Python", "SAP", "SQL"],
+      "metrics": [
+        {
+          "label": "Processing Time Saved",
+          "value": "2 hours/day",
+          "color": "green"
+        },
+        {
+          "label": "Annual Value Processed",
+          "value": "$10.56B AUD",
+          "color": "blue"
+        }
+      ],
+      "githubUrl": "https://github.com/JordanKitto/Invoice-Insight-Automation-Engine",
+      "icon": "chart",
+      "iconColor": "emerald",
+      "details": {
+        "description": "Enterprise-grade automation system for Queensland Health's invoice optimization, processing over 1.8 million invoices annually.",
+        "features": [
+          "Nine custom Oracle SQL scripts for data extraction",
+          "Batch processing with performance optimization",
+          "OCR failure point analysis and reporting",
+          "Automated scheduling and execution",
+          "Integration with SAP and DSS systems",
+          "Real-time performance monitoring"
+        ],
+        "techStack": ["Python", "SQL", "SAP", "Performance Analytics"],
+        "impact": "Saved 2.5 hours daily processing time, processing $10.56B AUD annually"
+      }
+    },
+    {
+      "id": "Invoice State Preservation Pipeline",
+      "title": "Invoice State Preservation Pipeline",
+      "description": "Automated Python and Oracle-based pipeline designed to capture, store, and version invoice data exactly as it arrives from SAP, enabling reliable change detection and OCR accuracy analysis.",
+      "category": ["automation", "data-engineering"],
+      "techStack": ["Python", "SQL", "Pandas", "ETL", "CSV"],
+      "metrics": [
+        {
+          "label": "Invoices Tracked",
+          "value": "1.8M+ annually",
+          "color": "green"
+        },
+        {
+          "label": "Daily Capture",
+          "value": "Scheduled ingestion",
+          "color": "blue"
+        }
+      ],
+      "githubUrl": "https://github.com/JordanKitto/Originals_capture_prototype",
+      "icon": "database",
+      "iconColor": "green",
+      "details": {
+        "description": "A production-style prototype that captures SAP invoice records daily from Oracle, preserves the original state of each document, and enables downstream comparison of updated data to identify field-level changes and OCR failures.",
+        "features": [
+          "Daily Oracle extraction of invoice records",
+          "Historical preservation of original invoice attributes",
+          "Incremental capture logic to prevent duplicates",
+          "Automated CSV append and data validation",
+          "Batch processing for scalable handling of high-volume data",
+          "Designed to support change detection workflows for OCR accuracy analysis"
+        ],
+        "techStack": [
+          "Python",
+          "Oracle SQL",
+          "Pandas",
+          "ETL Architecture",
+          "Incremental Data Capture"
+        ],
+        "impact": "Enabled reliable version tracking of invoice data across lifecycle stages, supporting future PIOR automation and OCR failure analytics."
+      }
+    },
+    {
+      "id": "vendor-facility-lookup",
+      "title": "Vendor & Facility Code Search Engine",
+      "description": "Desktop application built with Python and PySide6 to enable rapid lookup and validation of vendor and facility codes across name, region and company code dimensions. Designed for internal automation workflows supporting high-volume invoice and contract processing pipelines.",
+      "category": ["tooling", "automation"],
+      "techStack": ["Python", "PySide6", "SQLite", "UI/UX"],
+      "metrics": [
+        {
+          "label": "Search Speed",
+          "value": "<0.5s per query",
+          "color": "blue"
+        },
+        {
+          "label": "Modes Supported",
+          "value": "Dark/Light",
+          "color": "teal"
+        }
+      ],
+      "githubUrl": "https://github.com/JordanKitto/company_code_search",
+      "icon": "search",
+      "iconColor": "teal",
+      "details": {
+        "description": "Supports internal lookup workflows by enabling quick filtering and retrieval of vendor/facility company codes. Built with a responsive UI, table-based results, theme toggle, and pre-loaded dataset for instant access.",
+        "features": [
+          "Instant search by company code, name or region",
+          "Dark mode + light mode toggle for usability",
+          "Custom styled table view for results",
+          "Pre-loaded facility/vendor dataset to avoid latency",
+          "Built with modular Python backend for future extension into web or API services"
+        ],
+        "techStack": [
+          "Python",
+          "PySide6",
+          "SQLite",
+          "Pandas",
+          "UI/UX Design"
+        ],
+        "impact": "Improved internal code-lookup workflow speed for finance and contract teams; serves as a reusable utility for our broader data automation ecosystem."
+      }
+    }    
+    
+  ]
+}
+

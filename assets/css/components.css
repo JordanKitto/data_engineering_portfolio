@@ -1,0 +1,153 @@
+.hero-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../resources/data-flow-bg.png') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-card {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.filter-btn {
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.05);
+}
+
+.pipeline-flow {
+    position: relative;
+    overflow: hidden;
+}
+
+.pipeline-flow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    animation: flow 3s linear infinite;
+}
+
+/* Projects Carousel Styles */
+#projects-carousel-wrapper {
+    padding: 0 1rem;
+}
+
+#projects-carousel .splide__slide {
+    display: flex;
+    justify-content: center;
+}
+
+#projects-carousel .splide__slide > div {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Ensure carousel arrows are visible */
+#projects-carousel .splide__arrow {
+    background: var(--accent);
+    opacity: 1;
+}
+
+#projects-carousel .splide__arrow:hover {
+    opacity: 0.9;
+}
+
+#projects-carousel .splide__arrow--prev {
+    left: -1rem;
+}
+
+#projects-carousel .splide__arrow--next {
+    right: -1rem;
+}
+
+/* Pagination dots */
+#projects-carousel .splide__pagination {
+    bottom: -2rem;
+}
+
+#projects-carousel .splide__pagination__page {
+    background: var(--accent);
+    opacity: 0.3;
+}
+
+#projects-carousel .splide__pagination__page.is-active {
+    opacity: 1;
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    transform: translateX(-100%);
+}
+
+#mobile-menu:not(.hidden) {
+    transform: translateX(0);
+}
+
+.mobile-nav-link {
+    transition: color 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav-link:last-child {
+    border-bottom: none;
+}
+

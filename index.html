@@ -11,150 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-primary: #FAFAFA;
-            --text-primary: #1A1A1A;
-            --text-secondary: #4A4A4A;
-            --accent: #2563EB;
-            --success: #059669;
-            --warning: #D97706;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            overflow-x: hidden;
-        }
-        
-        .font-display { font-family: 'Playfair Display', serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('resources/data-flow-bg.png') center/cover;
-            opacity: 0.1;
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px) rotateX(5deg);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .skill-item {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        .project-card {
-            opacity: 0;
-            transform: scale(0.9);
-        }
-        
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .typewriter {
-            border-right: 2px solid var(--accent);
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 50% { border-color: var(--accent); }
-            51%, 100% { border-color: transparent; }
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--accent), var(--success));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .pipeline-flow {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pipeline-flow::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            animation: flow 3s linear infinite;
-        }
-        
-        @keyframes flow {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-        
-        .filter-btn {
-            transition: all 0.3s ease;
-        }
-        
-        .filter-btn.active {
-            background: var(--accent);
-            color: white;
-            transform: scale(1.05);
-        }
-        
-        .stats-counter {
-            font-variant-numeric: tabular-nums;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -188,22 +47,22 @@
                             <span id="typed-text"></span>
                         </h1>
                         <p class="text-xl text-gray-200 max-w-2xl leading-relaxed">
-                            Systems Analyst & Data Automation Engineer passionate about solving complex business problems through intelligent data pipelines and automation solutions.
+                            Automating complex reporting workflows with Python and SQL, translating business problems into structured data solutions, and delivering clear, actionable insights through visual dashboards.
                         </p>
                     </div>
                     
                     <div class="flex flex-wrap gap-4">
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
                             <div class="text-2xl font-bold text-white stats-counter" data-target="1800000">0</div>
-                            <div class="text-sm text-gray-300">Invoices Processed</div>
+                            <div class="text-sm text-gray-300">Financial Data Automted Each Year</div>
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
-                            <div class="text-2xl font-bold text-white stats-counter" data-target="150">0</div>
-                            <div class="text-sm text-gray-300">Minutes Saved Daily</div>
+                            <div class="text-2xl font-bold text-white">2+</div>
+                            <div class="text-sm text-gray-300">Manual Hours Saved Daily</div>
                         </div>
                         <div class="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
-                            <div class="text-2xl font-bold text-white stats-counter" data-target="10.56">0</div>
-                            <div class="text-sm text-gray-300">Billion AUD Processed</div>
+                            <div class="text-2xl font-bold text-white">End to End</div>
+                            <div class="text-sm text-gray-300">Data Automation and Insight Delivery</div>
                         </div>
                     </div>
                     
@@ -232,62 +91,12 @@
             <div class="text-center mb-16">
                 <h2 class="font-display text-4xl lg:text-5xl font-bold mb-6">Technical Expertise</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Specialized in building robust data pipelines, automation systems, and scalable solutions for enterprise environments.
+                    Specialised in building robust data pipelines, automation systems, and scalable solutions for enterprise environments.
                 </p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="skill-item">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-semibold text-lg">Python Development</span>
-                            <span class="text-blue-600 font-mono">95%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full skill-bar" data-width="95"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-semibold text-lg">SQL & Database Design</span>
-                            <span class="text-emerald-600 font-mono">90%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-emerald-600 h-3 rounded-full skill-bar" data-width="90"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-semibold text-lg">Data Pipeline Architecture</span>
-                            <span class="text-amber-600 font-mono">88%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-amber-600 h-3 rounded-full skill-bar" data-width="88"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-semibold text-lg">Oracle & Enterprise Systems</span>
-                            <span class="text-blue-600 font-mono">85%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-blue-600 h-3 rounded-full skill-bar" data-width="85"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-item">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="font-semibold text-lg">Automation & ETL</span>
-                            <span class="text-emerald-600 font-mono">92%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-3">
-                            <div class="bg-emerald-600 h-3 rounded-full skill-bar" data-width="92"></div>
-                        </div>
-                    </div>
-                </div>
+                <div class="space-y-8" data-skills-list></div>
                 
                 <div class="relative">
                     <div id="skills-chart" class="w-full h-96"></div>
@@ -322,110 +131,14 @@
                 </button>
             </div>
             
-            <!-- Projects Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                <!-- Service Entry Pipeline -->
-                <div class="project-card card-hover bg-white rounded-xl p-6 shadow-lg border border-gray-200" data-category="pipeline automation">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                            </svg>
-                        </div>
-                        <div class="flex space-x-1">
-                            <span class="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded">Python</span>
-                            <span class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded">Oracle</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Service Entry Pipeline</h3>
-                    <p class="text-gray-600 mb-4">Automated Oracle → CSV → Email pipeline for daily Service Entry report processing with modular OOP design.</p>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex justify-between text-sm">
-                            <span>Processing Time Reduction</span>
-                            <span class="font-semibold text-green-600">80%</span>
-                        </div>
-                        <div class="flex justify-between text-sm">
-                            <span>Daily Records Processed</span>
-                            <span class="font-semibold text-blue-600">5,000+</span>
-                        </div>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://github.com/JordanKitto/service-entry-pipeline" target="_blank" class="flex-1 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-center hover:bg-gray-200 transition-colors">
-                            View Code
-                        </a>
-                        <button class="expand-btn flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors" data-project="service-entry">
-                            Details
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Invoice Insight Automation -->
-                <div class="project-card card-hover bg-white rounded-xl p-6 shadow-lg border border-gray-200" data-category="automation analytics">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
-                            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                            </svg>
-                        </div>
-                        <div class="flex space-x-1">
-                            <span class="px-2 py-1 bg-emerald-100 text-emerald-600 text-xs rounded">Python</span>
-                            <span class="px-2 py-1 bg-yellow-100 text-yellow-600 text-xs rounded">SAP</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Invoice Insight Automation</h3>
-                    <p class="text-gray-600 mb-4">Python automation engine for Queensland Health's invoice optimization report, processing 1.8M+ invoices annually.</p>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex justify-between text-sm">
-                            <span>Processing Time Saved</span>
-                            <span class="font-semibold text-green-600">2 hours/day</span>
-                        </div>
-                        <div class="flex justify-between text-sm">
-                            <span>Annual Value Processed</span>
-                            <span class="font-semibold text-blue-600">$10.56B AUD</span>
-                        </div>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://github.com/JordanKitto/Invoice-Insight-Automation-Engine" target="_blank" class="flex-1 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-center hover:bg-gray-200 transition-colors">
-                            View Code
-                        </a>
-                        <button class="expand-btn flex-1 bg-emerald-600 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 transition-colors" data-project="invoice-insight">
-                            Details
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Python Foundations -->
-                <div class="project-card card-hover bg-white rounded-xl p-6 shadow-lg border border-gray-200" data-category="analytics">
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                            </svg>
-                        </div>
-                        <div class="flex space-x-1">
-                            <span class="px-2 py-1 bg-purple-100 text-purple-600 text-xs rounded">Python</span>
-                            <span class="px-2 py-1 bg-orange-100 text-orange-600 text-xs rounded">Jupyter</span>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Python Learning Foundation</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive Python learning repository with practical exercises, real-world scenarios, and data engineering focus.</p>
-                    <div class="space-y-2 mb-4">
-                        <div class="flex justify-between text-sm">
-                            <span>Learning Modules</span>
-                            <span class="font-semibold text-purple-600">5 Stages</span>
-                        </div>
-                        <div class="flex justify-between text-sm">
-                            <span>Practical Exercises</span>
-                            <span class="font-semibold text-orange-600">50+</span>
-                        </div>
-                    </div>
-                    <div class="flex space-x-2">
-                        <a href="https://github.com/JordanKitto/python-foundations" target="_blank" class="flex-1 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-center hover:bg-gray-200 transition-colors">
-                            View Code
-                        </a>
-                        <button class="expand-btn flex-1 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors" data-project="python-foundations">
-                            Details
-                        </button>
+            <!-- Projects Grid (Desktop) -->
+            <div class="hidden lg:grid lg:grid-cols-3 gap-8" id="projects-grid" data-projects-grid></div>
+            
+            <!-- Projects Carousel (Mobile) -->
+            <div class="lg:hidden" id="projects-carousel-wrapper">
+                <div class="splide" id="projects-carousel" data-projects-carousel>
+                    <div class="splide__track">
+                        <ul class="splide__list"></ul>
                     </div>
                 </div>
             </div>
@@ -448,54 +161,7 @@
                     <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-300"></div>
                     
                     <!-- Experience Items -->
-                    <div class="space-y-12">
-                        <div class="relative flex items-start">
-                            <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                                QH
-                            </div>
-                            <div class="ml-8 bg-gray-50 rounded-xl p-6 flex-1">
-                                <div class="flex justify-between items-start mb-4">
-                                    <div>
-                                        <h3 class="text-xl font-bold">Data Automation Engineer</h3>
-                                        <p class="text-blue-600 font-semibold">Queensland Health</p>
-                                    </div>
-                                    <span class="text-sm text-gray-500 bg-white px-3 py-1 rounded-full">2023 - Present</span>
-                                </div>
-                                <p class="text-gray-600 mb-4">
-                                    Leading automation initiatives for Queensland Health's Statewide Accounts Payable team, processing over 1.8 million invoices annually. Developed Python-based automation systems that reduced processing time from 2.5 hours to under 30 minutes daily.
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded">Python</span>
-                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded">Oracle SQL</span>
-                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-600 text-sm rounded">SAP</span>
-                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded">Data Pipeline</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="relative flex items-start">
-                            <div class="flex-shrink-0 w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold">
-                                CS
-                            </div>
-                            <div class="ml-8 bg-gray-50 rounded-xl p-6 flex-1">
-                                <div class="flex justify-between items-start mb-4">
-                                    <div>
-                                        <h3 class="text-xl font-bold">Computer Science Student</h3>
-                                        <p class="text-emerald-600 font-semibold">University Program</p>
-                                    </div>
-                                    <span class="text-sm text-gray-500 bg-white px-3 py-1 rounded-full">2022 - Present</span>
-                                </div>
-                                <p class="text-gray-600 mb-4">
-                                    Advancing technical knowledge in computer science fundamentals, data structures, algorithms, and software engineering principles. Applying academic concepts to real-world data engineering challenges.
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-red-100 text-red-600 text-sm rounded">Data Structures</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded">Algorithms</span>
-                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded">Software Engineering</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="space-y-12" data-experience-list></div>
                 </div>
             </div>
         </div>
@@ -617,6 +283,6 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

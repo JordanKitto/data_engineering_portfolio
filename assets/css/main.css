@@ -1,0 +1,35 @@
+:root {
+    --bg-primary: #FAFAFA;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --accent: #2563EB;
+    --success: #059669;
+    --warning: #D97706;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--accent), var(--success));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stats-counter {
+    font-variant-numeric: tabular-nums;
+}
+
