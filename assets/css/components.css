@@ -135,11 +135,12 @@
 
 /* Mobile Menu Styles */
 #mobile-menu {
-    transform: translateX(-100%);
+    max-height: 0;
+    overflow: hidden;
 }
 
 #mobile-menu:not(.hidden) {
-    transform: translateX(0);
+    max-height: 500px;
 }
 
 .mobile-nav-link {

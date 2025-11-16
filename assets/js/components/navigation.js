@@ -28,44 +28,41 @@ function initSmoothScroll() {
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
     
-    if (!mobileMenuBtn || !mobileMenu) return;
+    if (!mobileMenuBtn || !mobileMenu || !mobileMenuOverlay) return;
 
     // Open menu
     mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('hidden');
         mobileMenu.classList.remove('hidden');
         // Trigger reflow to enable transition
-        mobileMenu.offsetHeight;
-        mobileMenu.classList.remove('-translate-x-full');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        requestAnimationFrame(() => {
+            mobileMenu.classList.remove('opacity-0', '-translate-y-4');
+            mobileMenu.classList.add('opacity-100', 'translate-y-0');
+        });
     });
 
     // Close menu
     const closeMenu = () => {
-        mobileMenu.classList.add('-translate-x-full');
+        mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+        mobileMenu.classList.add('opacity-0', '-translate-y-4');
+        mobileMenuOverlay.classList.add('opacity-0');
         setTimeout(() => {
             mobileMenu.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore scrolling
+            mobileMenuOverlay.classList.add('hidden');
+            mobileMenuOverlay.classList.remove('opacity-0');
         }, 300);
     };
 
-    if (mobileMenuClose) {
-        mobileMenuClose.addEventListener('click', closeMenu);
-    }
+    // Close menu when clicking on overlay
+    mobileMenuOverlay.addEventListener('click', closeMenu);
 
     // Close menu when clicking on a link
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
             closeMenu();
         });
-    });
-
-    // Close menu when clicking outside (on the overlay)
-    mobileMenu.addEventListener('click', (e) => {
-        if (e.target === mobileMenu) {
-            closeMenu();
-        }
     });
 }
