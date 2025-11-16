@@ -34,9 +34,6 @@
                     </svg>
                 </button>
             </div>
-            <!-- Mobile Menu Overlay -->
-            <div id="mobile-menu-overlay" class="hidden md:hidden fixed inset-0 bg-black/30 z-40 transition-opacity duration-300"></div>
-            
             <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-lg z-50 transform transition-all duration-300 ease-in-out opacity-0 -translate-y-4">
                 <div class="flex flex-col px-6 py-4 space-y-4">
@@ -49,6 +46,9 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Menu Overlay - Outside nav to cover full screen -->
+    <div id="mobile-menu-overlay" class="hidden md:hidden fixed inset-0 bg-black/30 z-40 transition-opacity duration-300"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-bg min-h-screen flex items-center">

@@ -33,8 +33,12 @@ function initMobileMenu() {
     
     if (!mobileMenuBtn || !mobileMenu || !mobileMenuOverlay) return;
 
+    let isMenuOpen = false;
+
     // Open menu
-    mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        isMenuOpen = true;
         mobileMenuOverlay.classList.remove('hidden');
         mobileMenu.classList.remove('hidden');
         // Trigger reflow to enable transition
@@ -46,6 +50,8 @@ function initMobileMenu() {
 
     // Close menu
     const closeMenu = () => {
+        if (!isMenuOpen) return;
+        isMenuOpen = false;
         mobileMenu.classList.remove('opacity-100', 'translate-y-0');
         mobileMenu.classList.add('opacity-0', '-translate-y-4');
         mobileMenuOverlay.classList.add('opacity-0');
@@ -58,6 +64,13 @@ function initMobileMenu() {
 
     // Close menu when clicking on overlay
     mobileMenuOverlay.addEventListener('click', closeMenu);
+
+    // Close menu when clicking anywhere on the document (outside menu)
+    document.addEventListener('click', (e) => {
+        if (isMenuOpen && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
 
     // Close menu when clicking on a link
     mobileNavLinks.forEach(link => {
